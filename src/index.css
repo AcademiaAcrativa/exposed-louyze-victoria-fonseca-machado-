@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --font-script: "Dancing Script", cursive;
+  --font-serif: "Lora", Georgia, serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-serif);
+    background-color: #5c1712;
+    color: #f5e7cc;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    min-height: 100dvh;
+    overflow-x: hidden;
+  }
+}
+
+/* Warm vintage parchment surface with subtle organic paper texture */
+.parchment-paper {
+  background-color: #f3e2c3;
+  background-image:
+    radial-gradient(circle at 20% 15%, rgba(255, 250, 238, 0.55) 0%, transparent 55%),
+    radial-gradient(circle at 85% 85%, rgba(214, 179, 128, 0.35) 0%, transparent 55%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(120, 72, 36, 0.018) 0px,
+      rgba(120, 72, 36, 0.018) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+}
+
+/* Burgundy velvet radial backdrop inspired by the reference stationery */
+.burgundy-canvas {
+  background-color: #5c1712;
+  background-image:
+    radial-gradient(circle at 50% 35%, rgba(128, 30, 23, 0.65) 0%, rgba(74, 16, 12, 0.92) 78%, rgba(56, 11, 8, 1) 100%);
+}
+
+/* Scalloped stamp/doily edge effect for the love letter card */
+.scalloped-parchment {
+  --scallop-size: 14px;
+  position: relative;
+}
+
+.scalloped-edge-top {
+  height: 12px;
+  width: 100%;
+  background-image: radial-gradient(circle at 12px 12px, #f3e2c3 11.5px, transparent 12px);
+  background-size: 24px 12px;
+  background-repeat: repeat-x;
+}
+
+.scalloped-edge-bottom {
+  height: 12px;
+  width: 100%;
+  background-image: radial-gradient(circle at 12px 0px, #f3e2c3 11.5px, transparent 12px);
+  background-size: 24px 12px;
+  background-repeat: repeat-x;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

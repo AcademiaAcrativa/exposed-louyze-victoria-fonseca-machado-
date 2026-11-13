@@ -1,0 +1,6 @@
+{
+  "name": "Para o Meu Amor",
+  "description": "Um aplicativo romântico com cartinha e flores especiais de Luka para o seu amor.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
